@@ -17,7 +17,7 @@ print("Will use tool '%s'" % (tool.get_name()))
 langs = tool.get_available_languages()
 print("Available languages: %s" % ", ".join(langs))
 
-lang_num=1
+lang_num=0
 lang = langs[lang_num]
 print("Will use lang '%s'" % (lang))
 
@@ -42,8 +42,6 @@ else:
     texts.append(txt)
 
 for txt in texts:
-    txt = re.sub('([あ-んア-ン一-龥ー])\s+((?=[あ-んア-ン一-龥ー]))',
-    r'\1\2', txt)
     print(''*40)
     print( txt )
     print('-'*40)
